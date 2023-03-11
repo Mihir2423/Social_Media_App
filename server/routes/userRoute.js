@@ -4,7 +4,7 @@ import protect from "../middleware/auth.js";
 
 const route = express.Router()
 
-route.get("/", protect, getAllUser)
+route.get("/", getAllUser)
 route.get('/:id', protect, getUser)
 route.put('/:id', protect, updateUser)
 route.delete("/:id", protect, deleteUser)

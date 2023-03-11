@@ -16,7 +16,7 @@ export const createpost = (newPost) => API.post('/post', newPost);
 export const timeLinePost = (id) => API.get(`/post/${id}/timeLine`)
 export const likePost=(id, userId)=>API.put(`post/${id}/like`, {userId: userId})
 
-export const allUsers = ()  => API.get(`/user`)
+export const allUsers = ()  => axios.get(`https://social-d16k.onrender.com/user`)
 export const getUser = (userId) => API.get(`/user/${userId}`);
 export const followUser = (id,userId) => API.put(`/user/${id}/follow`, {currentUserId : userId})
 export const unfollowUser = (id,userId) => API.put(`/user/${id}/unfollow`, {currentUserId : userId})
