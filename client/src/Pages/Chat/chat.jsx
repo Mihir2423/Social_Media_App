@@ -27,7 +27,7 @@ function Chat() {
   }, [oldUser._id]);
 
   React.useEffect(() => {
-    socket.current = io("http://localhost:8800");
+    socket.current = io("http://localhost:4000");
     socket.current.emit("new-user-add", oldUser._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
@@ -50,6 +50,8 @@ function Chat() {
     const online = onlineUsers.find((user) => user.userId === chatMember);
     return online ? true : false;
   };
+
+  
 
 
   return (

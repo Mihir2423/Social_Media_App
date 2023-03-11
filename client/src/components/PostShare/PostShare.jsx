@@ -34,8 +34,8 @@ function PostShare() {
   const [postMessage, setPostMessage] = useState({
     desc: "",
     image: "",
-    userId: userInfo.oldUser._id,
-    userProfilePic: userInfo.oldUser.profilePic,
+    userId: userInfo.oldUser?._id,
+    userProfilePic: userInfo.oldUser?.profilePic,
   });
   function handleSubmit(e) {
     e.preventDefault();
